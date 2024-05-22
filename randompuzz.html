@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a1">
+    <input type="button" onclick="generator()">
+</body>
+<script>
+    // function random(){
+    //     var char = document.getElementById("a1").value;
+    //     console.log(char);
+    // }
+
+    function generator(){
+        var char = document.getElementById("a1").value;
+        // console.log(char);
+        var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+        var result='';
+        var arr=[];
+        for(let i=0;i<=10;i++){
+        var randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+         result += randomLetter; 
+        }
+        for(let i=0;i<100;i++){
+            var randomChar = char[Math.floor(Math.random()*char.length)]
+            if(arr.includes(randomChar)==false){
+                arr.push(randomChar);
+            }
+            console.log(arr.join(""))
+        }
+        document.write(result+arr.join(''));
+    }
+</script>
+</html>
